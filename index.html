@@ -20,85 +20,91 @@
     <main class="min-h-screen bg-gray-950 bg-[url('images/bg.png')] bg-no-repeat bg-center">
 
         <!--! Home Screen -->
-        <section id="home-screen" class="container-lg flex flex-col justify-center items-center min-h-screen ">
-            <h1 class="text-white text-[170px] font-normal font-anton">ALPHABET CLASH</h1>
-            <p class="text-white text-2xl font-medium leading-[28.80px] pt-[2px] pb-[56px]">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button onclick="letsPlay()" class="px-8 py-[22px] bg-white rounded-lg justify-center items-center gap-2.5 inline-flex         text-gray-950 text-2xl font-semibold leading-[28.80px]">Play Now</button>
+        <section id="home-screen" class="container-lg">
+            <div class="flex flex-col justify-center items-center min-h-screen">
+                <h1 class="text-white text-[170px] font-normal font-anton">ALPHABET CLASH</h1>
+                <p class="text-white text-2xl font-medium leading-[28.80px] pt-[2px] pb-[56px]">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="letsPlay()" class="px-8 py-[22px] bg-white rounded-lg justify-center items-center gap-2.5 inline-flex         text-gray-950 text-2xl font-semibold leading-[28.80px]">Play Now</button>
+            </div>
         </section>
 
         <!--! Playground -->
-        <section id="play-ground" class="container-lg flex flex-col items-center gap-20 pt-20 hidden">
-            <!--? screen -->
-            <div>
-                <div class="w-[1170px] h-[450px]  artboard-horizontal phone-6 bg-white bg-opacity-70 rounded-2xl border-[20px] border-gray-950 border-opacity-80 backdrop-blur-[20px]">
-                    <div class="flex justify-center">
-                        <p class="bg-slate-800 rounded-bl-xl rounded-br-xl px-8 pt-3 pb-[18px]       text-center text-white text-lg font-medium leading-snug">Don't watch keyboard  while playing...</p>
-                    </div>
-                    <div class="flex justify-center items-center pt-[92px]">
-                        <p id="current-alphabet" class="text-gray-950 text-9xl font-semibold leading-[153.60px] uppercase">a</p>
+        <section id="play-ground" class="container-lg hidden">
+            <div class="flex flex-col items-center gap-20 pt-20">
+                <!--? screen -->
+                <div>
+                    <div class="w-[1170px] h-[450px]  artboard-horizontal phone-6 bg-white bg-opacity-70 rounded-2xl border-[20px] border-gray-950 border-opacity-80 backdrop-blur-[20px]">
+                        <div class="flex justify-center">
+                            <p class="bg-slate-800 rounded-bl-xl rounded-br-xl px-8 pt-3 pb-[18px]       text-center text-white text-lg font-medium leading-snug">Don't watch keyboard  while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center pt-[92px]">
+                            <p id="current-alphabet" class="text-gray-950 text-9xl font-semibold leading-[153.60px] uppercase">a</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--? keyboard -->
-            <div>
-                <div class="flex justify-center gap-3 my-2 w-full text-center text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
-                    <kbd id="q" class="kbd px-[20px] py-[13px] rounded-[11px]">q</kbd>
-                    <kbd id="w" class="kbd px-[20px] py-[13px] rounded-[11px]">w</kbd>
-                    <kbd id="e" class="kbd px-[20px] py-[13px] rounded-[11px]">e</kbd>
-                    <kbd id="r" class="kbd px-[20px] py-[13px] rounded-[11px]">r</kbd>
-                    <kbd id="t" class="kbd px-[20px] py-[13px] rounded-[11px]">t</kbd>
-                    <kbd id="y" class="kbd px-[20px] py-[13px] rounded-[11px]">y</kbd>
-                    <kbd id="u" class="kbd px-[20px] py-[13px] rounded-[11px]">u</kbd>
-                    <kbd id="i" class="kbd px-[20px] py-[13px] rounded-[11px]">i</kbd>
-                    <kbd id="o" class="kbd px-[20px] py-[13px] rounded-[11px]">o</kbd>
-                    <kbd id="p" class="kbd px-[20px] py-[13px] rounded-[11px]">p</kbd>
-                </div> 
-                <div class="flex justify-center gap-3 my-2 w-full text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
-                    <kbd id="a" class="kbd px-[20px] py-[13px] rounded-[11px]">a</kbd>
-                    <kbd id="s" class="kbd px-[20px] py-[13px] rounded-[11px]">s</kbd>
-                    <kbd id="d" class="kbd px-[20px] py-[13px] rounded-[11px]">d</kbd>
-                    <kbd id="f" class="kbd px-[20px] py-[13px] rounded-[11px]">f</kbd>
-                    <kbd id="g" class="kbd px-[20px] py-[13px] rounded-[11px]">g</kbd>
-                    <kbd id="h" class="kbd px-[20px] py-[13px] rounded-[11px]">h</kbd>
-                    <kbd id="j" class="kbd px-[20px] py-[13px] rounded-[11px]">j</kbd>
-                    <kbd id="k" class="kbd px-[20px] py-[13px] rounded-[11px]">k</kbd>
-                    <kbd id="l" class="kbd px-[20px] py-[13px] rounded-[11px]">l</kbd>
-                </div> 
-                <div class="flex justify-center gap-3 my-2 w-full text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
-                    <kbd id="z" class="kbd px-[20px] py-[13px] rounded-[11px]">z</kbd>
-                    <kbd id="x" class="kbd px-[20px] py-[13px] rounded-[11px]">x</kbd>
-                    <kbd id="c" class="kbd px-[20px] py-[13px] rounded-[11px]">c</kbd>
-                    <kbd id="v" class="kbd px-[20px] py-[13px] rounded-[11px]">v</kbd>
-                    <kbd id="b" class="kbd px-[20px] py-[13px] rounded-[11px]">b</kbd>
-                    <kbd id="n" class="kbd px-[20px] py-[13px] rounded-[11px]">n</kbd>
-                    <kbd id="m" class="kbd px-[20px] py-[13px] rounded-[11px]">m</kbd>
-                    <kbd id="/" class="kbd px-[20px] py-[13px] rounded-[11px]">/</kbd>
+                <!--? keyboard -->
+                <div>
+                    <div class="flex justify-center gap-3 my-2 w-full text-center text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
+                        <kbd id="q" class="kbd px-[20px] py-[13px] rounded-[11px]">q</kbd>
+                        <kbd id="w" class="kbd px-[20px] py-[13px] rounded-[11px]">w</kbd>
+                        <kbd id="e" class="kbd px-[20px] py-[13px] rounded-[11px]">e</kbd>
+                        <kbd id="r" class="kbd px-[20px] py-[13px] rounded-[11px]">r</kbd>
+                        <kbd id="t" class="kbd px-[20px] py-[13px] rounded-[11px]">t</kbd>
+                        <kbd id="y" class="kbd px-[20px] py-[13px] rounded-[11px]">y</kbd>
+                        <kbd id="u" class="kbd px-[20px] py-[13px] rounded-[11px]">u</kbd>
+                        <kbd id="i" class="kbd px-[20px] py-[13px] rounded-[11px]">i</kbd>
+                        <kbd id="o" class="kbd px-[20px] py-[13px] rounded-[11px]">o</kbd>
+                        <kbd id="p" class="kbd px-[20px] py-[13px] rounded-[11px]">p</kbd>
+                    </div> 
+                    <div class="flex justify-center gap-3 my-2 w-full text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
+                        <kbd id="a" class="kbd px-[20px] py-[13px] rounded-[11px]">a</kbd>
+                        <kbd id="s" class="kbd px-[20px] py-[13px] rounded-[11px]">s</kbd>
+                        <kbd id="d" class="kbd px-[20px] py-[13px] rounded-[11px]">d</kbd>
+                        <kbd id="f" class="kbd px-[20px] py-[13px] rounded-[11px]">f</kbd>
+                        <kbd id="g" class="kbd px-[20px] py-[13px] rounded-[11px]">g</kbd>
+                        <kbd id="h" class="kbd px-[20px] py-[13px] rounded-[11px]">h</kbd>
+                        <kbd id="j" class="kbd px-[20px] py-[13px] rounded-[11px]">j</kbd>
+                        <kbd id="k" class="kbd px-[20px] py-[13px] rounded-[11px]">k</kbd>
+                        <kbd id="l" class="kbd px-[20px] py-[13px] rounded-[11px]">l</kbd>
+                    </div> 
+                    <div class="flex justify-center gap-3 my-2 w-full text-gray-950 text-[24px] font-semibold font-inter leading-[25.04px]">
+                        <kbd id="z" class="kbd px-[20px] py-[13px] rounded-[11px]">z</kbd>
+                        <kbd id="x" class="kbd px-[20px] py-[13px] rounded-[11px]">x</kbd>
+                        <kbd id="c" class="kbd px-[20px] py-[13px] rounded-[11px]">c</kbd>
+                        <kbd id="v" class="kbd px-[20px] py-[13px] rounded-[11px]">v</kbd>
+                        <kbd id="b" class="kbd px-[20px] py-[13px] rounded-[11px]">b</kbd>
+                        <kbd id="n" class="kbd px-[20px] py-[13px] rounded-[11px]">n</kbd>
+                        <kbd id="m" class="kbd px-[20px] py-[13px] rounded-[11px]">m</kbd>
+                        <kbd id="/" class="kbd px-[20px] py-[13px] rounded-[11px]">/</kbd>
+                    </div>
                 </div>
-            </div>
-            <!--? life score -->
-            <div class="flex justify-between w-full">
-                <button class="flex justify-center items-center gap-2 bg-fuchsia-800 rounded-[30px] border-none hover:bg-fuchsia-600 py-[16px] px-[30px]      text-center text-white text-xl font-medium font-inter leading-normal">
-                    Life
-                    <img src="images/life.svg" alt="life-icon">
-                    <span id="current-life">3</span>
-                </button>
-                <button class="flex justify-center items-center gap-2 bg-violet-800 rounded-[30px] border-none hover:bg-violet-600 py-[16px] px-[30px]      text-center text-white text-xl font-medium font-inter leading-normal">
-                    Score
-                    <img src="images/score.svg" alt="score-icon">
-                    <span id="current-score">0</span>
-                </button>
+                <!--? life score -->
+                <div class="flex justify-between w-full">
+                    <button class="flex justify-center items-center gap-2 bg-fuchsia-800 rounded-[30px] border-none hover:bg-fuchsia-600 py-[16px] px-[30px]      text-center text-white text-xl font-medium font-inter leading-normal">
+                        Life
+                        <img src="images/life.svg" alt="life-icon">
+                        <span id="current-life">3</span>
+                    </button>
+                    <button class="flex justify-center items-center gap-2 bg-violet-800 rounded-[30px] border-none hover:bg-violet-600 py-[16px] px-[30px]      text-center text-white text-xl font-medium font-inter leading-normal">
+                        Score
+                        <img src="images/score.svg" alt="score-icon">
+                        <span id="current-score">0</span>
+                    </button>
+                </div>
             </div>
         </section>
 
         <!--! Score -->
-        <section id="final-score" class="container-lg flex justify-center items-center min-h-screen hidden">
-            <div class="py-[50px] px-[70px] bg-[#FFFFFF33] rounded-2xl border border-white border-opacity-20 text-center space-y-6">
-                <h1 class="text-white text-[64px] font-extrabold leading-[76.80px]">
-                    Score :
-                    <span id="last-score" class="text-white text-[64px] font-medium leading-[76.80px]">0</span>
-                </h1>
-                <button onclick="letsPlay()" class="px-8 py-4 bg-white rounded-lg justify-center items-center gap-2.5 inline-flex       text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Again</button>
-                <p class="text-white text-xl font-medium leading-normal">Practice will make you Pro</p>
+        <section id="final-score" class="container-lg hidden">
+            <div class="flex justify-center items-center min-h-screen">
+                <div class="py-[50px] px-[70px] bg-[#FFFFFF33] rounded-2xl border border-white border-opacity-20 text-center space-y-6">
+                    <h1 class="text-white text-[64px] font-extrabold leading-[76.80px]">
+                        Score :
+                        <span id="last-score" class="text-white text-[64px] font-medium leading-[76.80px]">0</span>
+                    </h1>
+                    <button onclick="letsPlay()" class="px-8 py-4 bg-white rounded-lg justify-center items-center gap-2.5 inline-flex       text-gray-950 text-2xl font-semibold font-['Poppins'] leading-[28.80px]">Play Again</button>
+                    <p class="text-white text-xl font-medium leading-normal">Practice will make you Pro</p>
+                </div>
             </div>
         </section>
     </main>
